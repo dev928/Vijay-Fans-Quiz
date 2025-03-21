@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay Fans Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0F1419; /* Darkest color from palette */
+            color: #E0E0E0; /* Light gray for text readability */
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1F2526; /* Very dark gray for container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #E0E0E0;
+        }
+        .question {
+            margin-bottom: 20px;
+            background-color: #2A2E34; /* Dark blue-gray for question background */
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .question p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #3A3B3C; /* Slightly lighter gray for options */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .options label:hover {
+            background-color: #2E2F2F; /* Hover effect with dark gray */
+        }
+        button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2E2F2F; /* Button color */
+            color: #E0E0E0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #3A3B3C; /* Hover effect for button */
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2A2E34;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct answers */
+        }
+        .incorrect {
+            color: #F44336; /* Red for incorrect answers */
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Vijay Fans Quiz</h1>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Which of the following was Vijay’s debut film as a lead actor?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Poove Unakkaga</label>
+                    <label><input type="radio" name="q1" value="B"> B) Naalaiya Theerpu</label>
+                    <label><input type="radio" name="q1" value="C"> C) Kadhalukku Mariyadhai</label>
+                    <label><input type="radio" name="q1" value="D"> D) Thirumalai</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Which Vijay movie earned him the title "Ilayathalapathy"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Thulladha Manamum Thullum</label>
+                    <label><input type="radio" name="q2" value="B"> B) Ghilli</label>
+                    <label><input type="radio" name="q2" value="C"> C) Sivakasi</label>
+                    <label><input type="radio" name="q2" value="D"> D) Mersal</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which movie was Vijay’s first ₹100 crore grosser at the box office?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Thuppakki</label>
+                    <label><input type="radio" name="q3" value="B"> B) Kaththi</label>
+                    <label><input type="radio" name="q3" value="C"> C) Mersal</label>
+                    <label><input type="radio" name="q3" value="D"> D) Sarkar</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. What is the name of Vijay’s character in the blockbuster movie “Ghilli”?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) Saravanan</label>
+                    <label><input type="radio" name="q4" value="B"> B) Velu</label>
+                    <label><input type="radio" name="q4" value="C"> C) Azhagu</label>
+                    <label><input type="radio" name="q4" value="D"> D) Sanjay</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Which of these films was NOT directed by Atlee?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) Bigil</label>
+                    <label><input type="radio" name="q5" value="B"> B) Theri</label>
+                    <label><input type="radio" name="q5" value="C"> C) Mersal</label>
+                    <label><input type="radio" name="q5" value="D"> D) Kaththi</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Which Vijay movie featured him in a dual role for the first time?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Kaththi</label>
+                    <label><input type="radio" name="q6" value="B"> B) Azhagiya Tamil Magan</label>
+                    <label><input type="radio" name="q6" value="C"> C) Mersal</label>
+                    <label><input type="radio" name="q6" value="D"> D) Villu</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. What was the first Vijay movie to be released in China?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Mersal</label>
+                    <label><input type="radio" name="q7" value="B"> B) Master</label>
+                    <label><input type="radio" name="q7" value="C"> C) Bigil</label>
+                    <label><input type="radio" name="q7" value="D"> D) Sarkar</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Which song from a Vijay film became a viral dance challenge globally?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Aalaporaan Thamizhan</label>
+                    <label><input type="radio" name="q8" value="B"> B) Selfie Pulla</label>
+                    <label><input type="radio" name="q8" value="C"> C) Vaathi Coming</label>
+                    <label><input type="radio" name="q8" value="D"> D) Kutti Story</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. What is the name of Vijay’s fan club?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) Vijay Makkal Iyakkam</label>
+                    <label><input type="radio" name="q9" value="B"> B) Thalapathy Rasigan Club</label>
+                    <label><input type="radio" name="q9" value="C"> C) Ilayathalapathy Army</label>
+                    <label><input type="radio" name="q9" value="D"> D) Tamil Pasanga Group</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. In which Vijay film did he portray three different characters?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) Bigil</label>
+                    <label><input type="radio" name="q10" value="B"> B) Mersal</label>
+                    <label><input type="radio" name="q10" value="C"> C) Puli</label>
+                    <label><input type="radio" name="q10" value="D"> D) Theri</label>
+                </div>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "B",
+            q2: "C",
+            q3: "A",
+            q4: "B",
+            q5: "D",
+            q6: "B",
+            q7: "A",
+            q8: "C",
+            q9: "A",
+            q10: "B"
+        };
+
+        const explanations = {
+            q1: "Vijay made his debut as a lead actor in the 1992 film Naalaiya Theerpu, directed by his father S. A. Chandrasekhar. Though the film didn’t perform well at the box office, it marked the beginning of his illustrious career.",
+            q2: "The title Ilayathalapathy (Young Commander) was widely used by fans after Sivakasi (2005), as it became one of his iconic mass-action films. However, he later changed it to Thalapathy (Commander).",
+            q3: "Directed by A. R. Murugadoss, Thuppakki (2012) was the first Vijay film to enter the ₹100 crore club. The action-thriller was a huge hit and established him as a pan-Indian star.",
+            q4: "In Ghilli (2004), Vijay played Saravana Velu, a kabaddi player who helps a woman escape from a powerful villain. The film was a huge success and remains one of his biggest hits.",
+            q5: "Kaththi (2014) was directed by A. R. Murugadoss, while Atlee directed Theri (2016), Mersal (2017), and Bigil (2019), all of which were major hits.",
+            q6: "In Azhagiya Tamil Magan (2007), Vijay played a dual role for the first time, portraying both the protagonist and antagonist. His negative role was well-received.",
+            q7: "Mersal (2017) was the first Tamil film to be released in China after Rajinikanth's Enthiran. The film gained international recognition for its strong storyline and Vijay’s performance.",
+            q8: "Vaathi Coming from Master (2021) became a global sensation with its catchy beats and signature dance moves, leading to millions of social media dance challenges.",
+            q9: "Vijay Makkal Iyakkam (VMI) is the official fan club and social welfare organization founded by Vijay, actively involved in charity work and social service.",
+            q10: "Mersal (2017) featured Vijay in three roles: a doctor (Maaran), a magician (Vettri), and a father (Vetri Maaran). The film was a massive hit and highlighted his versatility as an actor."
+        };
+
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let score = 0;
+            let resultsHTML = "<h2>Quiz Results</h2>";
+
+            for (let i = 1; i <= 10; i++) {
+                const question = `q${i}`;
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                const correctAnswer = correctAnswers[question];
+
+                if (userAnswer) {
+                    if (userAnswer.value === correctAnswer) {
+                        score++;
+                        resultsHTML += `<p><strong>Question ${i}:</strong> <span class="correct">Correct!</span> ${explanations[question]}</p>`;
+                    } else {
+                        resultsHTML += `<p><strong>Question ${i}:</strong> <span class="incorrect">Incorrect.</span> Your answer: ${userAnswer.value}. Correct answer: ${correctAnswer}. ${explanations[question]}</p>`;
+                    }
+                } else {
+                    resultsHTML += `<p><strong>Question ${i}:</strong> <span class="incorrect">Not answered.</span> Correct answer: ${correctAnswer}. ${explanations[question]}</p>`;
+                }
+            }
+
+            alert(`Your score: ${score}/10`);
+            document.getElementById("results").innerHTML = resultsHTML;
+            document.getElementById("results").style.display = "block";
+        });
+    </script>
+</body>
+</html>
